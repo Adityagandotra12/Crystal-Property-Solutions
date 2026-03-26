@@ -1,0 +1,110 @@
+/*
+  Crystal Property Solutions — vibrant design tokens
+  Saturated blues, cyan, emerald + accent purple for “crystal” energy
+*/
+:root {
+  /* Brand — high-saturation, web-friendly */
+  --brand-navy: #030712;
+  --brand-navy-soft: #0c1a2e;
+  --brand-navy-mid: #132f4a;
+  --brand-blue-night: #0c7c9c;
+  --brand-cyan: #22d3ee;
+  --brand-sky: #38bdf8;
+  --brand-blue: #3b82f6;
+  --brand-blue-mid: #2563eb;
+  --brand-blue-deep: #1d4ed8;
+  --brand-green: #34d399;
+  --brand-green-deep: #059669;
+  --brand-lime: #a3e635;
+  --brand-violet: #a78bfa;
+
+  /* RGB for rgba() */
+  --rgb-cyan: 34, 211, 238;
+  --rgb-sky: 56, 189, 248;
+  --rgb-blue: 59, 130, 246;
+  --rgb-green: 52, 211, 153;
+  --rgb-navy: 3, 7, 18;
+  --rgb-blue-deep: 29, 78, 216;
+  --rgb-violet: 167, 139, 250;
+
+  /* Surfaces — cool + mint wash */
+  --c-ink: #0a1628;
+  --c-text: #1e3a5f;
+  --c-muted: #3d5a73;
+  --c-border: #a8d4ef;
+  --c-border-soft: #d4ecfa;
+  --c-surface: #ffffff;
+  --c-surface-alt: #dff6fc;
+  --c-surface-elevated: #eef9ff;
+  --c-page-bg: #d6effc;
+  --c-code-bg: #cff4fe;
+
+  /* Hero / dark */
+  --c-hero-eyebrow: rgba(165, 243, 252, 0.98);
+  --c-hero-body: rgba(224, 242, 254, 0.94);
+  --c-on-dark-muted: rgba(186, 210, 230, 0.96);
+  --c-footer-text: rgba(236, 254, 255, 0.95);
+  --c-footer-subtle: rgba(165, 200, 220, 0.92);
+
+  --header-logo-max-h: 56px;
+  --footer-logo-max-h: 48px;
+
+  --c-blue-bright: var(--brand-cyan);
+  --c-blue-mid: var(--brand-blue);
+  --c-blue-deep: var(--brand-blue-deep);
+  --c-green: var(--brand-green);
+  --c-green-dark: var(--brand-green-deep);
+  --c-navy: var(--brand-navy);
+
+  --c-shadow:
+    0 12px 32px -12px rgba(var(--rgb-blue), 0.22),
+    0 6px 14px -8px rgba(var(--rgb-navy), 0.12);
+  --c-shadow-soft:
+    0 6px 20px -8px rgba(var(--rgb-sky), 0.18);
+
+  --sans:
+    'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--c-text);
+  background: var(--c-page-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --header-logo-max-h: 48px;
+    --footer-logo-max-h: 40px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
