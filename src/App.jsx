@@ -4,17 +4,19 @@ import emailjs from '@emailjs/browser'
 import './App.css'
 
 const CONTACT_EMAIL = 'info@crystalpropertysolutions.ca'
-const CONTACT_PHONE = '+1 (647) 550-4388'
-const CONTACT_PHONE_TEL = '+16475504388'
-const FACEBOOK_URL = '#'
-const INSTAGRAM_URL = '#'
+const CONTACT_PHONE = '+1 (365) 773 4141'
+const CONTACT_PHONE_TEL = '+13657734141'
+const FACEBOOK_URL =
+  'https://www.facebook.com/share/1KtkWGe5ZA/?mibextid=wwXIfr'
+const INSTAGRAM_URL =
+  'https://www.instagram.com/crystalpropertysolutions?igsh=bTB2eHJ6cmVwMzg5'
 
 const EMAILJS_PUBLIC_KEY = 'V8t6YRLgGtQf6gznL'
 const EMAILJS_SERVICE_ID = 'service_7p3rgrn'
 const EMAILJS_TEMPLATE_ID = 'template_g2o0cmk'
 
 /** WhatsApp: country code + number, digits only (no + or spaces). */
-const WHATSAPP_NUMBER = '16475504388'
+const WHATSAPP_NUMBER = '13657734141'
 
 const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   'Hi — I would like to ask about Crystal Property Solutions.',
