@@ -11,6 +11,9 @@ const FACEBOOK_URL =
 const INSTAGRAM_URL =
   'https://www.instagram.com/crystalpropertysolutions?igsh=bTB2eHJ6cmVwMzg5'
 
+/** Single source for hours (shown in Contact only; footer links there). */
+const BUSINESS_HOURS = 'Monday – Sunday: 7:00 AM – 9:00 PM'
+
 const EMAILJS_PUBLIC_KEY = 'V8t6YRLgGtQf6gznL'
 const EMAILJS_SERVICE_ID = 'service_7p3rgrn'
 const EMAILJS_TEMPLATE_ID = 'template_g2o0cmk'
@@ -19,7 +22,7 @@ const EMAILJS_TEMPLATE_ID = 'template_g2o0cmk'
 const WHATSAPP_NUMBER = '13657734141'
 
 const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  'Hi — I would like to ask about Crystal Property Solutions.',
+  "Hi! I'm interested in your services. Could you please share more details?",
 )}`
 
 const sectionReveal = {
@@ -199,6 +202,13 @@ export default function App() {
                 <h3 className="card__title">Transparent communication</h3>
                 <p>
                   Honest recommendations—no upsells you do not need.
+                </p>
+              </li>
+              <li className="card card--facet">
+                <h3 className="card__title">Fully insured</h3>
+                <p>
+                  We carry appropriate insurance so you and your property are
+                  covered while we are on site—hire us with confidence.
                 </p>
               </li>
             </ul>
@@ -503,7 +513,7 @@ export default function App() {
                     <div className="contact-info__body">
                       <span className="contact-info__label">Business Hours</span>
                       <span className="contact-info__value contact-info__value--multiline">
-                        Monday – Sunday: 7:00 AM – 9:00 PM
+                        {BUSINESS_HOURS}
                       </span>
                     </div>
                   </li>
@@ -540,11 +550,9 @@ export default function App() {
             </p>
             <p className="footer__small">
               Contact:{" "}
-              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> ·{" "}
+              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+              {" · "}
               <a href={`tel:${CONTACT_PHONE_TEL}`}>{CONTACT_PHONE}</a>
-            </p>
-            <p className="footer__small footer__hours">
-              Hours: Monday – Sunday: 7:00 AM – 9:00 PM
             </p>
 
             <div className="footer__social" aria-label="Social links">
