@@ -56,14 +56,18 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <div className="site">
+    <div className="site" id="top">
       <a className="skip-link" href="#main">
         Skip to content
       </a>
 
       <header className="header">
         <div className="header__inner">
-          <a className="brand" href="#top" id="top">
+          <a
+            className="brand"
+            href="#top"
+            onClick={() => setMenuOpen(false)}
+          >
             <span className="brand__mark">
               <img
                 src="/logo.png"
